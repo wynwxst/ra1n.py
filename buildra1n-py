@@ -1,0 +1,25 @@
+echo "run as root...."
+echo "building..."
+cd ra1n.py
+curl https://ftp.he1ios.repl.co/ra1n-py/build/ --output fonts.zip
+curl https://ftp.he1ios.repl.co/ra1n-py/build/ --output resources.zip
+curl https://ftp.he1ios.repl.co/ra1n-py/build/ --output ipwndfu.zip
+
+echo "unpacking..."
+
+unzip fonts.zip
+echo "##############+++++++++++++++++"
+unzip resources.zip
+echo "########################+++++++"
+unzip ipwndfu.zip
+echo "##############################+"
+echo "done"
+
+echo "cleaning up..."
+rm -rf fonts.zip
+rm -rf resources.zip
+rm -rf iwpndfu.zip
+
+echo "starting ra1n.py"
+
+sudo bash setup.sh
